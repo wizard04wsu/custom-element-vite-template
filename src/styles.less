@@ -1,0 +1,23 @@
+// LESS example: variables + nesting
+@border: #ccc;
+@pad: 1rem;
+
+:host {
+  display: block;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.card {
+  border: 1px solid @border;
+  border-radius: 10px;
+  padding: @pad;
+
+  .header {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .content {
+    line-height: 1.35;
+  }
+}
