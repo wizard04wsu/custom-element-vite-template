@@ -41,7 +41,7 @@ function assertValidTag(tag) {
 	const validCharacters = /^[a-z](?=([a-z0-9-]*).$)\1[a-z0-9]$/.test(tag);
 	const hasHyphen = tag.includes('-');
 	if (!validCharacters || !hasHyphen) {
-		die(`Invalid tag "${tag}". A custom element name must start with a letter, end with a letter or number, and include a hyphen.`);
+		die(`Invalid tag "${tag}". A custom element tag must start with a letter, end with a letter or number, and include a hyphen.`);
 	}
 }
 
