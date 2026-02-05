@@ -17,21 +17,6 @@
 			"command": "npm run rename -- --tag ${input:tagName} --class ${input:className}"
 		},
 		{
-			"label": "Dev: Host on Dev",
-			"detail": "Host the unbundled source for hot module reload.",
-			"type": "npm",
-			"script": "dev",
-			"presentation": {
-				"clear": true,
-				"reveal": "silent",
-				"showReuseMessage": false
-			},
-			"icon": {
-				"id": "globe",
-				"color": "terminal.ansiCyan"
-			}
-		},
-		{
 			"label": "Test: Check Types",
 			"detail": "Check for type correctness.",
 			"type": "npm",
@@ -44,6 +29,21 @@
 			},
 			"icon": {
 				"id": "beaker",
+				"color": "terminal.ansiGreen"
+			}
+		},
+		{
+			"label": "Dev: Host on Dev",
+			"detail": "Host the unbundled source for hot module reload.",
+			"type": "npm",
+			"script": "dev",
+			"presentation": {
+				"clear": true,
+				"reveal": "silent",
+				"showReuseMessage": false
+			},
+			"icon": {
+				"id": "globe",
 				"color": "terminal.ansiGreen"
 			}
 		},
