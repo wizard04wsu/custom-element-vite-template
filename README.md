@@ -1,4 +1,4 @@
-# Custom Element Template (Vite + TS + single-file build)
+# Custom Element Template
 
 Goals:
 - Develop Web Components with a fast dev server (Vite)
@@ -9,11 +9,22 @@ Goals:
 ## Quick start
 
 ```bash
+# Install dependencies
 npm install
+
+# Rename the template (optional)
+npm run rename -- --tag fancy-dialog --class FancyDialog
+
+# Start the dev server
 npm run dev
 ```
 
-Open the local dev URL printed by Vite.
+## Renaming the template
+
+The rename script is conservative; it only replaces known placeholders from the template. It is recommended to run it before making any other changes to the codebase. You can run it multiple times if needed.
+
+- Custom element tag names must contain a hyphen.
+- If the `--class` option is omitted, it defaults to an UpperCamelCase version of the tag name.
 
 ## Build a single JS file
 
@@ -22,20 +33,10 @@ npm run build
 ```
 
 Output:
-- `dist/my-element.js` (IIFE bundle; include via a normal `<script>` tag)
+- `dist/my-element.js` (or whatever you named your element)  
+This is an IIFE bundle; include it via a normal `<script>` tag.
 
-## Rename the template
-
+Preview the bundled output:
 ```bash
-npm run rename -- --tag fancy-dialog --class FancyDialog
+npm run preview
 ```
-
-This updates:
-- element tag name (`static tagName`)
-- class name
-- demo page usage
-- build output filename (`dist/<tag>.js`)
-
-Notes:
-- Custom element tag names must contain a hyphen.
-- The script is conservative; it only replaces known placeholders from the template.

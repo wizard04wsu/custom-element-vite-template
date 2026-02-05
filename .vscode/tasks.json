@@ -12,7 +12,7 @@
 		},
 		{
 			"label": "Setup: Rename Element",
-			"detail": "Change the tag name and class name of the custom element.",
+			"detail": "Change the tag name and class name of the custom element. Class name is optional.",
 			"type": "shell",
 			"command": "npm run rename -- --tag ${input:tagName} --class ${input:className}"
 		},
